@@ -1,6 +1,6 @@
 import { Button, Box } from '@mui/material';
 
-const Botones = ({ resultadoCuota }) => {
+const Botones = ({ resultadoCuota, onDetalleClick  }) => {
     return (
         <Box sx={{ display: 'flex', justifyContent: 'center', gap: 1 }}>
             <Button 
@@ -15,7 +15,7 @@ const Botones = ({ resultadoCuota }) => {
                 variant="outlined" 
                 color="primary" 
                 sx={{ color: 'white' }}
-                onClick={() => alert(`Los detalles de la cuota ${resultadoCuota} son...`)}
+                onClick={onDetalleClick}
             >
                 VER DETALLE DE CUOTAS
             </Button>
@@ -24,3 +24,6 @@ const Botones = ({ resultadoCuota }) => {
 };
 
 export default Botones;
+
+//prompt
+// pero la mision es cuando haga click en: onClick={() => alert(`Los detalles de la cuota ${resultadoCuota} son...`)} en vez del alert me lleve al componente DetallesCuotas y se carge en SimuladorCredito.jsx
